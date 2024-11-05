@@ -1,0 +1,202 @@
+!DOCTYPE html
+html lang=fr
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleGuide Complet des Offres Irrésistiblestitle
+    script src=httpscdn.jsdelivr.netnpmchart.jsscript
+    style
+        root {
+            --primary #2c3e50;
+            --secondary #3498db;
+            --accent #e74c3c;
+        }
+        
+        body {
+            font-family 'Segoe UI', sans-serif;
+            margin 0;
+            padding 0;
+            background #f5f6fa;
+            color #333;
+        }
+
+        .container {
+            max-width 1100px;
+            margin 0 auto;
+            padding 20px;
+        }
+
+        .header {
+            background linear-gradient(135deg, var(--primary), var(--secondary));
+            color white;
+            padding 60px 0;
+            text-align center;
+        }
+
+        .chapter {
+            background white;
+            margin 30px 0;
+            padding 25px;
+            border-radius 10px;
+            box-shadow 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .illustration {
+            width 100%;
+            height 350px;
+            margin 20px 0;
+            border-radius 8px;
+            background #f8f9fa;
+        }
+
+        .key-point {
+            border-left 4px solid var(--secondary);
+            padding 15px;
+            margin 15px 0;
+            background #f8f9fa;
+        }
+
+        .download-section {
+            text-align center;
+            padding 40px 0;
+        }
+
+        .download-button {
+            display inline-block;
+            background var(--accent);
+            color white;
+            padding 15px 30px;
+            border-radius 5px;
+            text-decoration none;
+            font-weight bold;
+            transition all 0.3s ease;
+        }
+
+        .download-buttonhover {
+            transform translateY(-2px);
+            box-shadow 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        ul {
+            padding-left 20px;
+        }
+
+        h2 {
+            color var(--primary);
+            margin-bottom 20px;
+        }
+
+        h3 {
+            color var(--secondary);
+        }
+    style
+head
+body
+    div class=header
+        div class=container
+            h1Guide Complet des Offres Irrésistiblesh1
+            pLa méthode éprouvée pour créer des offres qui convertissentp
+        div
+    div
+
+    div class=container id=content
+        div class=chapter
+            h21. Les Fondamentauxh2
+            canvas id=chart1 class=illustrationcanvas
+            div class=key-point
+                h3Points Essentielsh3
+                ul
+                    liCréation de valeur exceptionnelleli
+                    liDifférenciation uniqueli
+                    liPromesse claire et mesurableli
+                ul
+            div
+        div
+
+        div class=chapter
+            h22. Structure de l'Offreh2
+            canvas id=chart2 class=illustrationcanvas
+            div class=key-point
+                h3Composantes Clésh3
+                ul
+                    liOffre principaleli
+                    liBonus stratégiquesli
+                    liGarantie sans risqueli
+                ul
+            div
+        div
+
+        div class=chapter
+            h23. Maximisation des Conversionsh2
+            canvas id=chart3 class=illustrationcanvas
+            div class=key-point
+                h3Stratégiesh3
+                ul
+                    liTest et optimisationli
+                    liPsychologie de la venteli
+                    liPoints de frictionli
+                ul
+            div
+        div
+
+        div class=download-section
+            a href=# class=download-button id=downloadBtnTélécharger le Guide Completa
+        div
+    div
+
+    script
+         Configuration des graphiques
+        window.onload = function() {
+            const charts = {
+                chart1 {
+                    type 'radar',
+                    data {
+                        labels ['Valeur', 'Différenciation', 'Clarté', 'Garantie', 'Urgence'],
+                        datasets [{
+                            label 'Éléments Fondamentaux',
+                            data [90, 85, 95, 88, 92],
+                            backgroundColor 'rgba(52, 152, 219, 0.2)',
+                            borderColor 'rgba(52, 152, 219, 1)'
+                        }]
+                    }
+                },
+                chart2 {
+                    type 'bar',
+                    data {
+                        labels ['Offre Core', 'Bonus', 'Garantie'],
+                        datasets [{
+                            label 'Impact sur les Conversions',
+                            data [85, 70, 90],
+                            backgroundColor 'rgba(46, 204, 113, 0.6)'
+                        }]
+                    }
+                },
+                chart3 {
+                    type 'line',
+                    data {
+                        labels ['Étape 1', 'Étape 2', 'Étape 3', 'Étape 4'],
+                        datasets [{
+                            label 'Taux de Conversion',
+                            data [20, 40, 60, 85],
+                            borderColor 'rgba(231, 76, 60, 1)',
+                            fill false
+                        }]
+                    }
+                }
+            };
+
+            Object.keys(charts).forEach(id = {
+                const ctx = document.getElementById(id).getContext('2d');
+                new Chart(ctx, charts[id]);
+            });
+
+             Gestion du téléchargement
+            document.getElementById('downloadBtn').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Le téléchargement va démarrer...');
+                 Ici viendra le code de téléchargement
+            });
+        };
+    script
+body
+html
